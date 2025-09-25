@@ -1,0 +1,137 @@
+@import url("../../assets/common.css");
+
+/* Container baseline */
+.screen60.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header matches the style from screen-60-4.css but adapted to tokens */
+.screen60__header {
+  padding: 24px 16px;
+  background: linear-gradient(135deg, var(--color-e53166), var(--color-ffd70f));
+  color: var(--color-ffffff);
+  border-radius: var(--radius-14);
+}
+
+.screen60__headerInner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.screen60__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.screen60__title {
+  margin: 0;
+  font-size: var(--fs-34);
+  font-weight: var(--fw-900);
+  letter-spacing: 0;
+}
+
+.screen60__subtitle {
+  margin: 0;
+  font-size: var(--fs-20);
+  font-weight: var(--fw-700);
+  opacity: 0.9;
+}
+
+/* Button: styled per design tokens */
+.screen60__btn {
+  border: 1px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: var(--color-ffffff);
+  padding: 10px 14px;
+  border-radius: var(--radius-10);
+  font-weight: var(--fw-800);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.screen60__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-3);
+}
+.screen60__btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.45);
+}
+
+/* Main layout */
+.screen60__main {
+  padding: 24px 0 48px;
+}
+
+/* Card */
+.screen60__card {
+  margin: 16px 0;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-14);
+  padding: 16px;
+}
+
+/* Section Title */
+.screen60__sectionTitle {
+  margin: 0 0 12px 4px;
+  font-size: var(--fs-24);
+  font-weight: var(--fw-800);
+}
+
+/* Row grid to replace absolute positioning for responsiveness */
+.screen60__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Boxes reflecting labels using tokenized colors */
+.screen60__box {
+  border-radius: var(--radius-14);
+  padding: 16px;
+  color: var(--color-ffffff);
+  box-shadow: var(--shadow-1);
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+}
+.screen60__box--pink { background: var(--color-e53166); }
+.screen60__box--amber {
+  background: var(--color-fcc51e);
+  color: var(--color-000000);
+  box-shadow: var(--shadow-11);
+}
+
+/* Typography samples */
+.screen60__type {
+  margin: 0 0 8px;
+}
+.screen60__type--xl { font-size: var(--fs-38); font-weight: var(--fw-900); }
+.screen60__type--lg { font-size: var(--fs-34); font-weight: var(--fw-700); }
+.screen60__type--md { font-size: var(--fs-28); font-weight: var(--fw-800); }
+.screen60__type--sm { font-size: var(--fs-20); font-weight: var(--fw-700); }
+
+/* Footer */
+.screen60__footer {
+  text-align: center;
+  padding: 16px 0;
+  opacity: .85;
+}
+
+/* Responsive adjustments */
+/* On smaller screens we stack grid items vertically and relax spacing.
+   This deviates slightly from absolute positions in the original,
+   but provides a fluid layout in React. */
+@media (max-width: 720px) {
+  .screen60__headerInner {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .screen60__row {
+    grid-template-columns: 1fr;
+  }
+}

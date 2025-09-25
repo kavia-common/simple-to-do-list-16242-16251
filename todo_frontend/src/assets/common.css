@@ -1,0 +1,125 @@
+:root {
+  /* Color tokens from design_system_T0002 */
+  --color-fe6f69: #fe6f69;
+  --color-ffffff: #ffffff;
+  --color-dd3128: #dd3128;
+  --color-e53166: #e53166;
+  --color-eb398c: #eb398c;
+  --color-e23888: #e23888;
+  --color-ffd70f: #ffd70f;
+  --color-fcc51e: #fcc51e;
+  --color-000000: #000000;
+  --color-d9d9d9: #d9d9d9;
+  --color-e54841: #e54841;
+  --color-db312d: #db312d;
+  --color-e43264: #e43264;
+  --color-e53265: #e53265;
+  --color-e53264: #e53264;
+  --color-f9c320: #f9c320;
+  --color-f5c021: #f5c021;
+  --color-e44841: #e44841;
+
+  /* Typography base (family from tokens) */
+  --font-family: "Alegreya Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+  /* Example font sizes from tokens (alias a subset) */
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-27: 27px;
+  --fs-28: 28px;
+  --fs-34: 34px;
+  --fs-38: 38px;
+  --fs-48: 48px;
+
+  /* Font weights */
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+
+  /* Radii (from token list) */
+  --radius-3: 3px;
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-11: 11px;
+  --radius-14: 14px;
+  --radius-18: 18px;
+  --radius-21: 21px;
+  --radius-22: 22px;
+  --radius-30: 30px;
+  --radius-31: 31px;
+  --radius-37: 37px;
+  --radius-38: 38px;
+  --radius-41: 41px;
+  --radius-47: 47px;
+  --radius-76: 76px;
+  --radius-79: 79px;
+  --radius-81: 81px;
+
+  /* Shadow utilities mapped from design system shadows */
+  --shadow-0: 0 1.6344585419px 3.4283764362px 0 rgba(0,0,0,1);
+  --shadow-1: 0 22px 45.1px -18px rgba(0,0,0,1);
+  --shadow-2: 0 15px 45.8px -14px rgba(0,0,0,1);
+  --shadow-3: 0 2.7672564983px 2.2138051987px 0 rgba(0,0,0,1);
+  --shadow-4: 0 6.6501021385px 5.3200817108px 0 rgba(0,0,0,1);
+  --shadow-5: 0 12.5215520859px 10.017241478px 0 rgba(0,0,0,1);
+  --shadow-6: 0 22.336309433px 17.869047165px 0 rgba(0,0,0,1);
+  --shadow-7: 0 41.777610779px 33.422088623px 0 rgba(0,0,0,1);
+  --shadow-8: 0 100px 80px 0 rgba(0,0,0,1);
+  --shadow-9: 0 36px 66.9px -35px rgba(155,0,72,1);
+  --shadow-10: 0 14px 84px -45px rgba(139,0,66,1);
+  --shadow-11: 0 36px 45.9px -20px rgba(172,130,0,1);
+  --shadow-12: 0 2.7672564983px 13.83628273px 0 rgba(0,0,0,1);
+  --shadow-13: 0 6.6501021385px 33.250511169px 0 rgba(0,0,0,1);
+  --shadow-14: 0 12.5215520859px 62.607757568px 0 rgba(0,0,0,1);
+  --shadow-15: 0 22.336309433px 111.681541443px 0 rgba(0,0,0,1);
+  --shadow-16: 0 41.777610779px 208.888046265px 0 rgba(0,0,0,1);
+  --shadow-17: 0 100px 500px 0 rgba(0,0,0,1);
+  --shadow-18: 0 47px 89.8px -47px rgba(0,0,0,1);
+  --shadow-19: 0 4px 4px 0 rgba(0,0,0,1);
+  --shadow-20: 0 27px 28.2px -24px rgba(0,0,0,1);
+  --shadow-21: 0 24px 33.2px -14px rgba(0,0,0,1);
+  --shadow-22: 0 28px 30.7px -22px rgba(0,0,0,1);
+  --shadow-23: 0 46px 45.8px -40px rgba(0,0,0,1);
+
+  /* Page theme variables (basic) */
+  --page-bg: var(--color-ffffff);
+  --page-text: var(--color-000000);
+}
+
+[data-theme="dark"] {
+  --page-bg: #101014;
+  --page-text: #f2f2f2;
+}
+
+/* Base reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--page-bg);
+  color: var(--page-text);
+}
+
+/* Utility classes for shadows (subset) */
+.shadow-3 { box-shadow: var(--shadow-3); }
+.shadow-4 { box-shadow: var(--shadow-4); }
+.shadow-5 { box-shadow: var(--shadow-5); }
+
+/* Card surface helper using white token */
+.surface {
+  background: var(--color-ffffff);
+  border-radius: var(--radius-14);
+}
+
+/* Simple container baseline */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
